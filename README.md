@@ -1,5 +1,7 @@
 # jib-example
 
+https://github.com/GoogleContainerTools/distroless/tree/master/java
+
 # 1 Run
 ./gradlew jibDockerBuild
 
@@ -19,3 +21,12 @@ Result:
 $ jib-example            0.0.1               538ecd46a5b8        56 seconds ago      223MB
 
 $ docker run -d --name jib-example -p 8080:8080 jib-example:0.0.1
+
+# 3 Run
+Deploy on docker registry
+
+#### Generate local docker images
+$ ./gradlew jibDockerBuild
+#### Deploy docker image on public repository
+$ ./gradlew jib
+
