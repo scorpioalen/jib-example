@@ -17,3 +17,5 @@ Result:
 - Jib's build strategy separates the Java application into multiple layers for more granular incremental builds
     
 $ jib-example            0.0.1               538ecd46a5b8        56 seconds ago      223MB
+
+$ docker run -d --name jib-example -p 8080:8080 jib-example:0.0.1
