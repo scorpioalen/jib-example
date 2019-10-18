@@ -1,7 +1,19 @@
 # jib-example
 
-# Run
+# 1 Run
 ./gradlew jibDockerBuild
 
-# jib-example            0.0.1               5678c785e0e7        49 years ago        221MB
+$ jib-example            0.0.1               5678c785e0e7        49 years ago        221MB
 
+# 2 Run 
+Added creation time and new dependency
+
+./gradlew jibDockerBuild
+
+Result: 
+- faster docker build time (Jib separates application into multiple layers, splitting dependencies from classes)
+- Deploy layers that changed (Docker cache)
+- Reproducible
+- Jib's build strategy separates the Java application into multiple layers for more granular incremental builds
+    
+$ jib-example            0.0.1               538ecd46a5b8        56 seconds ago      223MB
